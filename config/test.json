@@ -1,0 +1,13 @@
+{
+  "log": {
+    "name": "app",
+    "base": {
+      "env": "test"
+    },
+    "enabled": false,
+    "level": 30
+  },
+  "endpoints": {
+    "typicode": ""
+  }
+}
