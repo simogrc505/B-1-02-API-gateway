@@ -17,13 +17,13 @@ const last5comments = (comments) => {
 
 const get_todos = (qs, user) => {
   return todos(qs)
-    .then((todos) => last5(todos))
-    .then((todos) => assoc('todos', todos, user))
+    .then(todos => last5(todos))
+    .then(todos => assoc('todos', todos, user))
 }
 
 const get_posts_and_comments = (qs, todos) => {
   return posts(qs)
-    .then((posts) => last10(posts))
+    .then(posts => last10(posts))
     .then((posts => Promise.all(map((post => {
         // console.log(post)
         return comments({postId: post.id})
